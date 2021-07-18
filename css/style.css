@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-drag: none;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #737373;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #929292;
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+img[alt] {
+  color: #000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+}
+
+#alert-model {
+  border: 1px solid #b8daff;
+  color: #004085;
+  background-color: #cce5ff;
+  border-radius: 5px;
+  max-width: 1200px;
+  margin: 2em auto 0;
+  padding: 15px 30px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  cursor: default;
+  position: relative;
+}
+
+#alert-model::-moz-selection {
+  background: #ffffff8f;
+}
+
+#alert-model::selection {
+  background: #ffffff8f;
+}
+
+@media screen and (max-width: 1200px) {
+  #alert-model {
+    margin: 2em 20px 0;
+  }
+}
+
+#alert-model-close {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-54%);
+  transform: translateY(-54%);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 999;
+  text-align: center;
+  padding-bottom: 5px;
+  -webkit-box-shadow: 0 0 3px #0000009e;
+  box-shadow: 0 0 3px #0000009e;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.nav-logo {
+  padding: 10px 0;
+}
+
+.nav-logo img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+#nav-ham-btn {
+  display: none;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 365px) {
+  #nav-ham-btn {
+    display: block;
+  }
+}
+
+#nav-btns {
+  list-style: none;
+  padding: 10px 0;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+@media screen and (max-width: 365px) {
+  #nav-btns {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 5px 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+}
+
+#nav-btns li {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin: 0 10px;
+  position: relative;
+  height: 23px;
+}
+
+@media screen and (max-width: 365px) {
+  #nav-btns li {
+    display: block;
+    height: auto;
+    margin: 0;
+    line-height: 35px;
+  }
+}
+
+#nav-btns li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1px;
+  width: 100%;
+  height: 2px;
+  border-radius: 5px;
+  background: #b5b5b5;
+  -webkit-transition: .12s ease-out;
+  transition: .12s ease-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media screen and (max-width: 365px) {
+  #nav-btns li::after {
+    position: static;
+  }
+}
+
+#nav-btns li:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+
+#nav-btns li a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.main-container {
+  margin: 8px auto 0;
+  max-width: 1200px;
+}
+
+@media screen and (max-width: 1199px) {
+  .main-container {
+    max-width: 900px;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .main-container {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .main-container {
+    max-width: 300px;
+  }
+}
+
+.post-title {
+  font-family: roboto-regular;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  color: #263238;
+  text-align: left;
+  padding: 20px 0 10px;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.post-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.post-box {
+  margin: 10px;
+  width: 280px;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+}
+
+.post-box img {
+  max-width: 280px;
+  height: 180px;
+  width: 100%;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.post-box:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.post-box:hover .post-box-hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.post-box-hover {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#2196f3ba), to(#03a9f466));
+  background-image: linear-gradient(to top, #2196f3ba, #03a9f466);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+}
+
+.post-box-hover p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  line-height: 45px;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  text-transform: capitalize;
+}
+
+.post-box-hover a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  border-radius: 5px 0 5px 0;
+  padding: 5px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  background: #2fa3ff;
+}
